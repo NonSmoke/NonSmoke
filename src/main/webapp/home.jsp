@@ -44,10 +44,16 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    	<ul class="nav navbar-nav">
-	        	<li class="active"><a href="#">intro<span class="sr-only">(current)</span></a></li>
-	        	<li><a href="#">border</a></li>
-	        	<li><a href="#">Calender</a></li>
-	      	</ul>
+	        	<li><a href="#">intro<span class="sr-only">(current)</span></a></li>
+		      	<li class="dropdown">
+		       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
+		        	<ul class="dropdown-menu" role="menu">
+		            	<li><a href="#">border</a></li>
+		            	<li class="divider"></li>
+		            	<li><a href="#">Calender</a></li>
+		          	</ul>
+		        </li>
+	        </ul>
 	     <form class="navbar-form navbar-left" role="search">
 	        <div class="form-group">
 	        	<input type="text" class="form-control" placeholder="Search">
@@ -63,16 +69,16 @@
 	
 	<div class="row">
 		<div class="col-xs-6 box">
-				<img src="NonSmoke.PNG" width="500" height="400"> 
+ 				<img src="NonSmoke.PNG" width="500" height="400">
 		</div>
 		<div class="col-xs-6 box">
 			<form>
 				<div class="form-group">
-					<label for="InputId">Membership ID</label>
+					<label for="InputId">Membership ID</label><br>
 					<input type="name"/>
 				</div>
 				<div class="form-group">
-				    <label for="InputPassword">Password</label>
+				    <label for="InputPassword">Password</label><br>
 				    <input type="password"/>
 				</div>
 				<button type="submit" class="btn btn-default">Log in</button>
