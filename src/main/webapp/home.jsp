@@ -63,7 +63,7 @@
 	
 	<div class="row">
 		<div class="col-xs-6 box">
-<!-- 				<img src="NonSmoke.PNG" width="500" height="400"> -->
+				<img src="NonSmoke.PNG" width="500" height="400"> 
 		</div>
 		<div class="col-xs-6 box">
 			<form>
