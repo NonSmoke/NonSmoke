@@ -17,6 +17,7 @@
 	app.controller("myController", function() {
 		
 	});
+
 </script>
 <style type="text/css">
 	#header{
@@ -84,7 +85,7 @@
 				<button type="submit" class="btn btn-default">Log in</button>
 				<button type="reset" class="btn btn-default">Reset</button>
 				<br>
-				<a href="#" target="_blank" id="register">Join button</a>
+				<a href="#" id="register">Join button</a>
 			</form>
 		</div>
 	</div>
