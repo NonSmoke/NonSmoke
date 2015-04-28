@@ -72,14 +72,14 @@
  				<img src="NonSmoke.PNG" width="500" height="400">
 		</div>
 		<div class="col-xs-6 box">
-			<form>
+			<form action ="login" method="post">
 				<div class="form-group">
 					<label for="InputId">Membership ID</label><br>
-					<input type="name"/>
+					<input type="text" name="id"/>
 				</div>
 				<div class="form-group">
 				    <label for="InputPassword">Password</label><br>
-				    <input type="password"/>
+				    <input type="password" name="password"/>
 				</div>
 				<button type="submit" class="btn btn-default">Log in</button>
 				<button type="reset" class="btn btn-default">Reset</button>
