@@ -5,13 +5,13 @@
 <meta charset="EUC-KR">
 <title>home.jsp</title>
 
-<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="login/bootstrap-3.3.4/css/bootstrap.min.css"/>
 
-<script type="text/javascript" src="jquery/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="angular-1.3.15/angular.min.js"></script>
-<script type="text/javascript" src="angular-1.3.15/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="angular-1.3.15/angular-animate.min.js"></script>
+<script type="text/javascript" src="login/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="login/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular-animate.min.js"></script>
 <script type="text/javascript">
 	var app = angular.module("myApp", ["ngSanitize", "ngAnimate"]);
 	app.controller("myController", function() {
@@ -71,7 +71,7 @@
 	
 	<div class="row">
 		<div class="col-xs-6 box">
- 				<img src="NonSmoke.PNG" width="500" height="400">
+ 				<img src="login/NonSmoke.PNG" width="500" height="400">
 		</div>
 		<div class="col-xs-6 box">
 			<form action ="login" method="post">
