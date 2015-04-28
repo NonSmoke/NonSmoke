@@ -3,7 +3,7 @@
 <html data-ng-app="myApp">
 <head>
 <meta charset="EUC-KR">
-<title>home.jsp</title>
+<title>intro.jsp</title>
 
 <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
 
@@ -28,7 +28,7 @@
 </head>
 <body data-ng-controller="myController">
 <header class="container">
-	<h1 id="header">NonSmoke</h1>
+	<h1 id="header">NonSmoker</h1>
 	
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -68,29 +68,13 @@
 <section class="container">
 	
 	<div class="row">
-		<div class="col-xs-6 box">
- 				<img src="NonSmoke.PNG" width="500" height="400">
-		</div>
-		<div class="col-xs-6 box">
-			<form>
-				<div class="form-group">
-					<label for="InputId">Membership ID</label><br>
-					<input type="name"/>
-				</div>
-				<div class="form-group">
-				    <label for="InputPassword">Password</label><br>
-				    <input type="password"/>
-				</div>
-				<button type="submit" class="btn btn-default">Log in</button>
-				<button type="reset" class="btn btn-default">Reset</button>
-				<br>
-				<a href="#" target="_blank" id="register">Join button</a>
-			</form>
-		</div>
+			<h1>개요</h1><br>
+			<p>awdawfawfawfawfaw<br>
+			
 	</div>
 </section>
 <footer class="container">
-	<h1>PSW</h1>
+
 </footer>
 </body>
 </html>
