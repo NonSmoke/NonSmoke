@@ -56,9 +56,11 @@
 		      	<li class="dropdown">
 		       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
 		        	<ul class="dropdown-menu" role="menu">
-		            	<li><a href="#">border</a></li>
+		            	
+		     			<li><a href="nonSmokeCalender.jsp">Calender</a></li>
+		            	<li><a href="map.jsp">Map</a></li>
 		            	<li class="divider"></li>
-		            	<li><a href="calendar.jsp">Calender</a></li>
+		            	<li><a href="border.jsp">border</a></li>
 		          	</ul>
 		        </li>
 	        </ul>
