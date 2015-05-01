@@ -7,21 +7,22 @@
 
 <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
 
-<c:url var="jquery" value="/jquery"/>
-<c:url var="bootstrap" value="/bootstrap-3.3.4"/>
-<c:url var="angular" value="/angular-1.3.15"/>
-
-<script type="text/javascript" src="${jquery}/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="${bootstrap}/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="${angular}/angular.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-animate.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-route.min.js"></script>
-
+<script type="text/javascript" src="jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="bootstrap-3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="angular-1.3.15/angular.min.js"></script>
+<script type="text/javascript" src="angular-1.3.15/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="angular-1.3.15/angular-animate.min.js"></script>
 <script type="text/javascript">
 	var app = angular.module("myApp", ["ngSanitize", "ngAnimate"]);
 	app.controller("myController", function() {
+		
+	});
+	
+	$(document).ready(function(){
+		$(".date").live("click",function(){
+			var borrowdate = $(this).attr('id');
+			alert(borrowdate);
+		});
 		
 	});
 </script>
@@ -55,8 +56,9 @@
 		      	<li class="dropdown">
 		       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
 		        	<ul class="dropdown-menu" role="menu">
-		        		<li><a href="calendar.jsp">Calender</a></li>
-		        		<li><a href="map.jsp">Map</a></li>
+		            	
+		     			<li><a href="nonSmokeCalender.jsp">Calender</a></li>
+		            	<li><a href="map.jsp">Map</a></li>
 		            	<li class="divider"></li>
 		            	<li><a href="border.jsp">border</a></li>
 		          	</ul>

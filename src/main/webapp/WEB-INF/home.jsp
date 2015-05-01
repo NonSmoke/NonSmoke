@@ -5,25 +5,19 @@
 <meta charset="EUC-KR">
 <title>home.jsp</title>
 
-<link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="login/bootstrap-3.3.4/css/bootstrap.min.css"/>
 
-<c:url var="jquery" value="/jquery"/>
-<c:url var="bootstrap" value="/bootstrap-3.3.4"/>
-<c:url var="angular" value="/angular-1.3.15"/>
-
-<script type="text/javascript" src="${jquery}/jquery-2.1.3.min.js"></script>
-<script type="text/javascript" src="${bootstrap}/js/bootstrap.min.js"></script>
-
-<script type="text/javascript" src="${angular}/angular.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-animate.min.js"></script>
-<script type="text/javascript" src="${angular}/angular-route.min.js"></script>
-
+<script type="text/javascript" src="login/jquery/jquery-2.1.3.min.js"></script>
+<script type="text/javascript" src="login/bootstrap-3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="login/angular-1.3.15/angular-animate.min.js"></script>
 <script type="text/javascript">
 	var app = angular.module("myApp", ["ngSanitize", "ngAnimate"]);
 	app.controller("myController", function() {
 		
 	});
+
 </script>
 <style type="text/css">
 	#header{
@@ -35,7 +29,7 @@
 </head>
 <body data-ng-controller="myController">
 <header class="container">
-	<h1 id="header">NonSmoker</h1>
+	<h1 id="header">NonSmoke</h1>
 	
 	<nav class="navbar navbar-default">
 		<div class="container-fluid">
@@ -51,12 +45,12 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	    	<ul class="nav navbar-nav">
-	        	<li><a href="#">intro<span class="sr-only">(current)</span></a></li>
+	        	<li><a href="intro.jsp">intro<span class="sr-only">(current)</span></a></li>
 		      	<li class="dropdown">
 		       		<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span class="caret"></span></a>
 		        	<ul class="dropdown-menu" role="menu">
-		        		<li><a href="calendar.jsp">Calender</a></li>
-		        		<li><a href="map.jsp">Map</a></li>
+		            	<li><a href="nonSmokeCalendar.jsp">Calender</a></li>
+		            	<li><a href="map.jsp">Map</a></li>
 		            	<li class="divider"></li>
 		            	<li><a href="border.jsp">border</a></li>
 		          	</ul>
@@ -73,6 +67,30 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
+<section class="container">
+	
+	<div class="row">
+		<div class="col-xs-6 box">
+ 				<img src="login/NonSmoke.PNG" width="500" height="400">
+		</div>
+		<div class="col-xs-6 box">
+			<form action ="login" method="post">
+				<div class="form-group">
+					<label for="InputId">Membership ID</label><br>
+					<input type="text" name="id"/>
+				</div>
+				<div class="form-group">
+				    <label for="InputPassword">Password</label><br>
+				    <input type="password" name="password"/>
+				</div>
+				<button type="submit" class="btn btn-default">Log in</button>
+				<button type="reset" class="btn btn-default">Reset</button>
+				<br>
+				<a href="#" id="register">Join button</a>
+			</form>
+		</div>
+	</div>
+</section>
 <footer class="container">
 	<h1>PSW</h1>
 </footer>
