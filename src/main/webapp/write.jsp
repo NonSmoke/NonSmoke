@@ -46,7 +46,7 @@ function formCheck() {
 <form action="insert.jsp" method="post"  onsubmit="return formCheck();">
 제목 : <input type="text" name="title" /><br/>
 작성자 : <input type="text" name="writer" /><br/>
-내용 : <input type="text" name="content"/><br/>
+내용 : <input type="text"  name="content"/><br/>
 날짜 : <input type="text" name="regdate" /><br/>
 <input type="submit" />
 </form>
