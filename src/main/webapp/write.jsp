@@ -6,8 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <script type="text/javascript">
-function formCheck() {
-    var title = document.forms[0].title.value;     
+		function formCheck() {
+   	 var title = document.forms[0].title.value;     
      // 사용하기 쉽도록 변수를 선언하여 담아주고,
     var writer = document.forms[0].writer.value;
     var regdate = document.forms[0].regdate.value;

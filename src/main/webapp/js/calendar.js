@@ -1,6 +1,6 @@
 
 	app.controller("calendarController", function($scope, $http){
-		alert("calendarController");
+		
 		var date = new Date();
 		var zz = 0;
 		$scope.cal = [];
@@ -55,6 +55,7 @@
 		}
 
 		$scope._add = function(){
+			
 			$http.post("/calendar", _.omit($scope.z, ["e"])).success(function(data){
 				$scope._set_cal(null);
 			});
@@ -69,6 +70,7 @@
 		}
 
 		$scope._delete = function(){
+			alert("닫기");
 			$http.Delete("/calendar/" + $scope.z._id).success(function(data){
 				$scope._set_cal(null);
 			});
