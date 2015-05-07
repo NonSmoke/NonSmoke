@@ -12,6 +12,6 @@ color: red;
 
 <h1>게시글 리스트</h1>
 	
-	<a href="list.do"> 글쓰기 </a>
+	<a href="#list" > 글쓰기 </a>
 
 </div>

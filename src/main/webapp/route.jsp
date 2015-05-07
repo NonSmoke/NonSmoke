@@ -64,6 +64,21 @@
 		  $routeProvider.otherwise({redirectTo: '/home'});
 
 		
+		  var list = {
+					templateUrl : "list.jsp",
+					controller : "listController"
+			};
+			
+			$routeProvider.when('/list', list);
+		 
+			var write = {
+						templateUrl : "write.jsp",
+						controller : "writeController"
+				};
+			
+			$routeProvider.when('/write', write);
+		  
+		  
 		
 	});
 	
@@ -79,14 +94,11 @@
 		
 	});
 
-	app.controller("borderController", function($scope) {
-	
-	});
-	
 </script>
 
 <script type="text/javascript" src="js/calendar.js"></script>
 <script type="text/javascript" src="js/login.js"></script>
+<script type="text/javascript" src="js/border.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
 
 
