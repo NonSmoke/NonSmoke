@@ -33,6 +33,24 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
   
+  <servlet>
+ 
+   <servlet-name>ControllerAction</servlet-name>
+ 
+   <servlet-class>com.board.controller.ControllerAction</servlet-class>
+ 
+</servlet>
+ 
+ 
+<servlet-mapping>
+ 
+   <servlet-name>ControllerAction</servlet-name>
+ 
+   <url-pattern>*.do</url-pattern>
+ 
+</servlet-mapping>
+  
+  
   
 <!--   DispatcherServlet -->
   <!-- The front controller of this Spring Web application, responsible for handling all application requests -->
@@ -51,7 +69,7 @@
 		<servlet-name>springDispatcherServlet</servlet-name>
 		<url-pattern>/webapp/*</url-pattern>
 	</servlet-mapping>
-  
+
 	
 </web-app>
 
