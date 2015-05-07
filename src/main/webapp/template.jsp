@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html data-ng-app="myApp">
 <head>
@@ -73,6 +74,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 </header>
+
 <footer class="container">
 	<h1>PSW</h1>
 </footer>
