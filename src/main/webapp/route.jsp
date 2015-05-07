@@ -13,7 +13,7 @@
 <c:url var="angular" value="/angular-1.3.15"/>
 
 
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js"></script>
 <script type="text/javascript" src="${jquery}/jquery-2.1.3.min.js"></script>
 <script type="text/javascript" src="${bootstrap}/js/bootstrap.min.js"></script>
@@ -86,7 +86,9 @@
 </script>
 
 <script type="text/javascript" src="js/calendar.js"></script>
+<script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/map.js"></script>
+
 
 
 </head>

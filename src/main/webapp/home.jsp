@@ -5,20 +5,22 @@
 
 
 <section class="container">
-	
+
 	<div class="row">
 		<div class="col-xs-6 box">
  				<img src="img/NonSmoke.PNG" width="500" height="400">
 		</div>
 		<div class="col-xs-6 box">
-			<form action ="login" method="post">
+<!-- #############################POST ·Î±×ÀÎ######################## -->
+			<form id="form1" name="form1" action ="/login" method="post">
+				
 				<div class="form-group">
 					<label for="InputId">Membership ID</label><br>
-					<input type="text" name="id"/>
+					<input type="text" id="id" name="id"/>
 				</div>
 				<div class="form-group">
 				    <label for="InputPassword">Password</label><br>
-				    <input type="password" name="password"/>
+				    <input type="password" id="password" name="password"/>
 				</div>
 				<input type="submit" value="login" class="btn btn-default">
 				<button type="reset" class="btn btn-default">Reset</button>
