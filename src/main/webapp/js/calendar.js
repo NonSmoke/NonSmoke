@@ -1,6 +1,6 @@
 
 	app.controller("calendarController", function($scope, $http){
-		alert("calendarController");
+//		alert("calendarController");
 		var date = new Date();
 		var zz = 0;
 		$scope.cal = [];
@@ -55,10 +55,13 @@
 		}
 
 		$scope._add = function(){
+			
 			$http.post("/calendar", _.omit($scope.z, ["e"])).success(function(data){
+
 				$scope._set_cal(null);
 			});
 			$scope.z = null;
+			alert("등록되었습니다.....");
 		}
 
 		$scope._edit = function(){

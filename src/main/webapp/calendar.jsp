@@ -1,165 +1,63 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<!DOCTYPE HTML>
-<html lang="en-US" ng-app="myApp">
-<head>
-	<meta charset="UTF-8">
-	<title>ÀÏº° ½ºÄÉÁì</title>
-	<style type="text/css">
-		#cal {
-			clear: both;
-			border-collapse: collapse;
-			margin: auto;
-		}
-		#cal td {
-			width: 150px;
-			height: 70px;
-			border: 1px solid #777;
-			vertical-align: top;
-		}
-		#cal thead td {
-			text-align: center;
-			height: 25px;
-			color: #000 !important;
-			background-color: #ddd;
-		}
-		#cal .n {
-			display: block;
-			width: 100%;
-			text-align: right;
-			cursor: pointer;
-		}
-		#cal .n:hover {
-			background-color: #ddd;
-		}
-		#cal .e {
-			display: block;
-			cursor: pointer;
-			font-size: 12px;
-			padding: 3px;
-		}
-		#cal .e:hover {
-			background-color: #ddd;
-		}
-		#cal .e span {
-			padding: 3px 0px;
-		}
-		#cal_head {
-			width: 1000px;
-			margin: auto;
-		}
-		#cal_head>div {
-			float: left;
-			width: 50%;
-			display: inline-block;
-			height: 30px;
-		}
-		#cal_head .right {
-			padding-top: 30px;
-			text-align: right;
-		}
-		.state_0 {
-			color: #666;
-			opacity: 0.3;
-		}
-		.state_1 {
-			color: #000;
-		}
-		.today_1 {
-			background-color: #ddd;
-		}
-		#cal_exec {
-			position: absolute;
-			z-index: 100;
-			width: 600px;
-			border-collapse: collapse;
-			border: 1px solid #999;
-			top: 110px;
-			left: 50%;
-			margin-left: -300px;
-			background-color: #ccc;
-			box-shadow: 5px 5px 5px #777;
-		}
-		#cal_exec td:nth-child(odd){
-			width: 20%;
-			text-align: center;
-		}
-		#cal_exec td {
-			padding: 5px;
-		}
-		#cal_exec td input:not([type="radio"]) {
-			width: 90%;
-			padding: 3px;
-		}
-		#cal_exec td textarea {
-			width: 90%;
-			height: 150px;
-			padding: 3px;
-		}
-		#cal_exec button {
-			font-size: 15px;
-		}
-	</style>
 
-	
-	
-</head>
-<body>
-	<div ng-controller="calendarController">
+	<div data-ng-controller="calendarController">
 
 		<div id="cal_head">
-			<div class="left"><h1>{{yy}}³â {{mm+1}}¿ù</h1></div>
+			<div class="left"><h1>{{yy}}ë…„ {{mm+1}}ì›”</h1></div>
 			<div class="right">
-				<button ng-click="_set_cal(-1)">ÀÌÀü´Ş</button>
-				<button ng-click="_set_cal(0)">ÀÌ¹ø´Ş</button>
-				<button ng-click="_set_cal(1)">´ÙÀ½´Ş</button>
+				<button data-ng-click="_set_cal(-1)">ì´ì „ë‹¬</button>
+				<button data-ng-click="_set_cal(0)">ì´ë²ˆë‹¬</button>
+				<button data-ng-click="_set_cal(1)">ë‹¤ìŒë‹¬</button>
 			</div><br><br><hr>
 		</div>
+		
+		
 		<table id="cal">
 			<thead>
-				<td>sun</td>
+				<td class ="sun">sun</td>
 				<td>mon</td>
 				<td>tue</td>
 				<td>wed</td>
 				<td>thu</td>
 				<td>fri</td>
-				<td>sat</td>
+				<td class ="sat">sat</td>
 			</thead>
-			<tr ng-repeat="y in [0,1,2,3,4,5]">
-				<td ng-repeat="x in [0,1,2,3,4,5,6]" class="state_{{cal[y*7+x].mm == mm ? 1 : 0}} today_{{cal[y*7+x].tt == tt ? 1 : 0}}">
-					<span class="n" ng-click="_select(cal[y*7+x])">{{cal[y*7+x].dd}}</span>
-					<div class="e" ng-click="_select(e)" ng-repeat="e in cal[y*7+x].e"><span ng-style="{'color': e.color,'background-color': e.background}">{{e.title}}</span></div>
+			<tr data-ng-repeat="y in [0,1,2,3,4,5]">
+				<td data-ng-repeat="x in [0,1,2,3,4,5,6]" class="state_{{cal[y*7+x].mm == mm ? 1 : 0}} today_{{cal[y*7+x].tt == tt ? 1 : 0}}">
+					<span class="n" data-ng-click="_select(cal[y*7+x])">{{cal[y*7+x].dd}}</span>
+					<div class="e" data-ng-click="_select(e)" data-ng-repeat="e in cal[y*7+x].e"><span data-ng-style="{'color': e.color,'background-color': e.background}">{{e.title}}</span></div>
 				</td>
 			</tr>
 		</table>
 		
 
-		<table id="cal_exec" ng-show="z">
+		<table id="cal_exec" data-ng-show="z">
 		<tr>
-			<td colspan="2">{{z.yy}}³â {{z.mm+1}}¿ù {{z.dd}}ÀÏ</td>
+			<td colspan="2">{{z.yy}}ë…„ {{z.mm+1}}ì›” {{z.dd}}ì¼</td>
 		</tr>
 		<tr>
-			<td>Á¦¸ñ</td>
-			<td><input ng-model="z.title"></td>
+			<td>ì œëª©</td>
+			<td><input data-ng-model="z.title"></td>
 		</tr>
 		<tr>
-			<td>±ÛÀÚ»ö</td>
-			<td><label ng-repeat="c in ccc" ng-style="{color: c}"><input type="radio" ng-model="z.color" value="{{c}}">¡á </label></td>
+			<td>ê¸€ììƒ‰</td>
+			<td><label data-ng-repeat="c in ccc" data-ng-style="{color: c}"><input type="radio" data-ng-model="z.color" value="{{c}}">â–  </label></td>
 		</tr>
 		<tr>
-			<td>¹è°æ»ö</td>
-			<td><label ng-repeat="c in ccc" ng-style="{color: c}"><input type="radio" ng-model="z.background" value="{{c}}">¡á </label></td>
+			<td>ë°°ê²½ìƒ‰</td>
+			<td><label data-ng-repeat="c in ccc" data-ng-style="{color: c}"><input type="radio" data-ng-model="z.background" value="{{c}}">â–  </label></td>
 		</tr>
 		<tr>
-			<td>³»¿ë</td>
-			<td><textarea ng-model="z.content"></textarea></td>
+			<td>ë‚´ìš©</td>
+			<td><textarea data-ng-model="z.content"></textarea></td>
 		</tr>
 		<tr>
 			<td colspan="2">
-				<button ng-show="!z._id" ng-disabled="!z.title" ng-click="_add()">µî·Ï</button>
-				<button ng-show="z._id" ng-disabled="!z.title" ng-click="_edit()">¼öÁ¤</button>
-				<button ng-show="z._id" ng-click="_Delete()">»èÁ¦</button>
-				<button ng-click="_deselect()">´İ±â</button>
+				<button data-ng-show="!z._id" data-ng-disabled="!z.title" data-ng-click="_add()">ë“±ë¡</button>
+				<button data-ng-show="z._id" data-ng-disabled="!z.title" data-ng-click="_edit()">ìˆ˜ì •</button>
+				<button data-ng-show="z._id" data-ng-click="_Delete()">ì‚­ì œ</button>
+				<button data-ng-click="_deselect()">ë‹«ê¸°</button>
 			</td>
 		</tr>
 		</table>
@@ -167,5 +65,3 @@
 	</div>
 	
 
-</body>
-</html>
