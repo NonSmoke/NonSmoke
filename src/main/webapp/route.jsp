@@ -7,6 +7,7 @@
 <meta charset="EUC-KR">
 <title>route.jsp</title>
 <link rel="stylesheet" href="bootstrap-3.3.4/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="css/calendar.css"/>
 
 <c:url var="jquery" value="/jquery"/>
 <c:url var="bootstrap" value="/bootstrap-3.3.4"/>
