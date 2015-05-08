@@ -78,7 +78,13 @@
 			
 			$routeProvider.when('/write', write);
 		  
-		  
+			var insert = {
+					templateUrl : "insert.jsp",
+					controller : "insertController"
+			};
+		
+		$routeProvider.when('/insert', insert);
+	  
 		
 	});
 	

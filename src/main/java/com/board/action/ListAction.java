@@ -26,7 +26,7 @@ public class ListAction implements CommandAction {
  
             request.setAttribute("articleList", articleList);   // 셋팅된 리스트를 뷰에 포워드합니다.
  
-        return "list.jsp";
+        return "#list";
  
         } 
 }

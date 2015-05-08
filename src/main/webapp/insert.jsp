@@ -52,7 +52,7 @@
     
    }finally{
 	   
-       out.print("<script>location.href='list.do';</script>");
+       out.print("<script>location.href='#list';</script>");
 
    }
 %>
