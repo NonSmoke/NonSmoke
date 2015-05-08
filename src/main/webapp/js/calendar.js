@@ -1,6 +1,10 @@
 
 	app.controller("calendarController", function($scope, $http){
+<<<<<<< HEAD
 //		alert("calendarController");
+=======
+		
+>>>>>>> 2f52c30ce77ad2d0f28f2e1fe63610f581259875
 		var date = new Date();
 		var zz = 0;
 		$scope.cal = [];
@@ -72,6 +76,7 @@
 		}
 
 		$scope._delete = function(){
+			alert("닫기");
 			$http.Delete("/calendar/" + $scope.z._id).success(function(data){
 				$scope._set_cal(null);
 			});

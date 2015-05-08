@@ -4,13 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>success.jsp</title>
+<title>Insert title here</title>
+
+<script>location.href="list.do"; </script>
 </head>
 <body>
-<h1>로그인 성공</h1>
-
-id = ${sessionScope.user.id} <br> 
-password = ${sessionScope.user.password} <br>
 
 </body>
 </html>

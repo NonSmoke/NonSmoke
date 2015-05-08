@@ -1,6 +1,6 @@
 
 app.controller("mapController", function($scope, GeoCoder) {
-	alert("mapController xxxx####");
+
 	
 	$scope.$on('mapInitialized', function(event, map) {
 		

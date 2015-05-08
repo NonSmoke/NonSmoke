@@ -1,5 +1,109 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<<<<<<< HEAD
+=======
+
+<!DOCTYPE HTML>
+<html lang="en-US" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>¿œ∫∞ Ω∫ƒ…¡Ï</title>
+	<style type="text/css">
+		#cal {
+			clear: both;
+			border-collapse: collapse;
+			margin: auto;
+		}
+		#cal td {
+			width: 150px;
+			height: 70px;
+			border: 1px solid #777;
+			vertical-align: top;
+		}
+		#cal thead td {
+			text-align: center;
+			height: 25px;
+			color: #000 !important;
+			background-color: #ddd;
+		}
+		#cal .n {
+			display: block;
+			width: 100%;
+			text-align: right;
+			cursor: pointer;
+		}
+		#cal .n:hover {
+			background-color: #ddd;
+		}
+		#cal .e {
+			display: block;
+			cursor: pointer;
+			font-size: 12px;
+			padding: 3px;
+		}
+		#cal .e:hover {
+			background-color: #ddd;
+		}
+		#cal .e span {
+			padding: 3px 0px;
+		}
+		#cal_head {
+			width: 1000px;
+			margin: auto;
+		}
+		#cal_head>div {
+			float: left;
+			width: 50%;
+			display: inline-block;
+			height: 30px;
+		}
+		#cal_head .right {
+			padding-top: 30px;
+			text-align: right;
+		}
+		.state_0 {
+			color: #666;
+			opacity: 0.3;
+		}
+		.state_1 {
+			color: #000;
+		}
+		.today_1 {
+			background-color: #ddd;
+		}
+		#cal_exec {
+			position: absolute;
+			z-index: 100;
+			width: 600px;
+			border-collapse: collapse;
+			border: 1px solid #999;
+			top: 110px;
+			left: 50%;
+			margin-left: -300px;
+			background-color: #ccc;
+			box-shadow: 5px 5px 5px #777;
+		}
+		#cal_exec td:nth-child(odd){
+			width: 20%;
+			text-align: center;
+		}
+		#cal_exec td {
+			padding: 5px;
+		}
+		#cal_exec td input:not([type="radio"]) {
+			width: 90%;
+			padding: 3px;
+		}
+		#cal_exec td textarea {
+			width: 90%;
+			height: 150px;
+			padding: 3px;
+		}
+		#cal_exec button {
+			font-size: 15px;
+		}
+	</style>
+>>>>>>> 2f52c30ce77ad2d0f28f2e1fe63610f581259875
 
 	<div data-ng-controller="calendarController">
 
